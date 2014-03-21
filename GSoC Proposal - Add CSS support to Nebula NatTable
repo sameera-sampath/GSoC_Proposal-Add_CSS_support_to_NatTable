@@ -1,0 +1,75 @@
+Add CSS support to Nebula NatTable.
+Sameera Sampath Nandasiri 
+ sameera.sampath@gmail.com 
+Possible Mentor: Dirk Fauth
+Abstract
+Nebula NatTable is a flexible framework to compose tables and grids with a lot of custom functionality. NatTable has its own style configuration but currently it doesn’t support CSS styling. In the current development state, there is theme styling added to NatTable, to make it easier to change the styling. Creating a plugin that adds CSS support for styling a NatTable would make it even easier to style a NatTable. My proposal is to create engine that is able to read CSS files and translate into NatTable styles, as a new NatTable plugin.
+
+
+Detailed Information
+
+CSS supports separating how content is shown from how the content is presented (e.g., colors, layout, fonts). CSS applies rules to affect the appearance of some subset of elements within a document. NatTable styles are divided into styles and painters. NatTable support Conditional Styling by using labels (Relevant codes are in layer package). GroupBy feature in the glazedlists extension of NatTable can also be styled. Styling configurations are applied to the table via ConfigRegistry.
+ I will implement engine that is able to read a CSS file and translates it into NatTable styles, as a fragment to NatTable. I will try to use existing methods in ConfigRegistry and register converted styles to the table but I will edit ConfigRegistry if necessary. 
+The article “Extending CSS to handle new widgets” [1] explains how to apply CSS to custom widgets. The article “Eclipse 4 CSS Styling- Tutorial” [2] explains how to style eclipse applications using CSS. The forum discussion “Applying CSS to NatTable” [3] guides to add CSS support to NatTable. So I will be using these resources to develop the NatTable plugin.
+
+[1]https://wiki.eclipse.org/Eclipse4/RCP/CSS#Extending_CSS_to_handle_new_widgets 
+[2]http://www.vogella.com/tutorials/Eclipse4CSS/article.html 
+[3]http://www.eclipse.org/forums/index.php/mv/msg/488278/1061400/#msg_1061400 
+
+Background 
+
+I watched “Introduction to NatTable” [4] video and download and ran NatTableExamples-1.0.1.jar [5] to get familiar with NatTable. After that I read NatTable documentation [6] up to styling, FAQ, examples. 
+Until GSoC program get started, I will continue my studies on Eclipse plugin development and CSS styling.
+[4]https://www.youtube.com/watch?v=eFJbQP5M7bY 
+[5]http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.0.1/NatTableExamples-1.0.1.jar  
+[6]http://eclipse.org/nattable/documentation.php  
+Deliverables 
+
+•	Implement an engine that is able to read a CSS file and translates it into NatTable styles, as a fragment to NatTable.
+•	Create test cases covering implemented CSS translation engine functions. 
+•	Complete Documentation about  desinged CSS translation engine and its functions.
+
+
+Schedule 
+
+
+Task	Duration	Start	Finish
+Read existing documentation about NatTable.	10 days	Tue 2/25/14	Sat 3/8/14
+Get familiar with NatTable and CSS.	40 days	Tue 2/25/14	Mon 4/21/14
+Research existing data relevant to add CSS support to NatTable.	40 days	Tue 2/25/14	Mon 4/21/14
+Design how to translate CSS into NatTable styles.	38 days	Thu 4/10/14	Sat 5/31/14
+Implement basic functions of CSS translation engine.	40 days	Sat 5/10/14	Thu 7/3/14
+Mid evaluation.	5 days	Mon 6/23/14	Fri 6/27/14
+Implement required functions or modify the translation engine to integrate CSS translation engine with NatTable ConfigRegistry.	45 days	Sun 6/1/14	Thu 7/31/14
+Create test cases.	21 days	Sun 7/20/14	Fri 8/15/14
+Finalize the code.	12 days	Fri 8/1/14	Mon 8/18/14
+Write documentations.	6 days	Mon 8/11/14	Mon 8/18/14
+Final evaluation.	5 days	Mon 8/18/14	Fri 8/22/14
+Submit the completed source code, Maintain and fix bugs related to this new feature in the future.	Not Specified 	Fri 8/22/14	After
+
+
+
+
+
+
+
+
+
+Expectations
+             As I have not much experience in Eclipse plug-in development, I like if my mentor can advise me about applicable technologies to the project.
+
+
+Contact Information
+
+I am Sameera Sampath Nandasiri and I am just about to complete second academic year of the Computer Science and Engineering undergraduate degree program at University of Moratuwa, Sri Lanka. Although I used Eclipse about two years as an IDE, My first interaction with eclipse development started few months ago when I started to create simple Eclipse plugin. I like to continue contributing to Eclipse on this project and other interesting projects. My e-mail address is sameera.sampath@gmail.com. I will upload codes related to this project on Github, so that anyone can give feedback. Our university allows us to submit GSoC project as fifth semester Software Engineering project which will be due around October. If I am selected this will motivate me to do a better job.
+
+Projects I am involved:
+
+•	Developing Online Bus Management System in PHP, MySQL – Will be completed during March.
+•	Developing AI game Client in C#. – Will be completed in April.
+•	Developed Library Automation System in C#, MySQL – Group project (3rd Semester )
+•	Developed Hospital Management System in Java, MySQL – Mini project (3rd Semester) 
+•	Developed Book Rating System in Java – Mini project (2nd Semester)
+•	Developed Simple Spreadsheet Application in Java – Mini project (2nd Semester)
+•	Won World Ranks in IEEE Xtream Programming Challange Competition held on 2013.
+
